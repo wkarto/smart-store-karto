@@ -81,3 +81,14 @@ Find raw data .csv files in course repo and download to data\raw folder
 ```
 py scripts\data_prep.py
 ```
+### 13. Prepare Data for ETL
+
+#### Run test script with data scrubber
+```
+py tests\test_data_scrubber.py
+```
+
+#### Finally running it on our data
+```
+py scripts\data_prep.py
+```
