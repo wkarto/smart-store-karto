@@ -92,3 +92,53 @@ py tests\test_data_scrubber.py
 ```
 py scripts\data_prep.py
 ```
+
+## 14. Data Warehouse (DW) Creation and Data Upload
+
+### 14.1 Create and Configure SQLite Database
+1. The SQLite database `smart_sales.db` is created in the `data/dw/` directory.
+2. The schema includes the following tables:
+   - `customer`
+   - `product`
+   - `sale`
+
+### 14.2 Database Schema
+
+#### **customer Table**
+| Column Name       | Data Type  | Description                          |
+|------------------|-----------|--------------------------------------|
+| `customer_id`   | INTEGER (PK) | Unique ID for each customer |
+| `name`          | TEXT       | Customer's full name |
+| `region`        | TEXT       | Region of the customer |
+| `join_date`     | TEXT       | Customer's sign-up date |
+| `loyalty_points` | INTEGER    | Loyalty points accumulated |
+| `customer_segment` | TEXT       | Customer segment (Bronze, Silver, Gold) |
+| `standard_datetime` | TEXT       | Standardized join date |
+
+#### **product Table**
+| Column Name     | Data Type  | Description                     |
+|----------------|-----------|---------------------------------|
+| `product_id`   | INTEGER (PK) | Unique ID for each product |
+| `product_name` | TEXT       | Name of the product |
+| `category`     | TEXT       | Product category (Electronics, Clothing, etc.) |
+| `unit_price`   | REAL       | Price per unit |
+| `stock_quantity` | INTEGER    | Available stock count |
+| `supplier`     | TEXT       | Supplier name |
+
+#### **sale Table**
+| Column Name       | Data Type  | Description                              |
+|------------------|-----------|------------------------------------------|
+| `sale_id`       | INTEGER (PK) | Unique sale transaction ID |
+| `customer_id`   | INTEGER (FK) | ID of the customer making the purchase |
+| `product_id`    | INTEGER (FK) | ID of the product sold |
+| `sale_amount`   | REAL       | Sale amount after discount |
+| `date`         | TEXT       | Date of sale |
+| `store_id`     | INTEGER    | Store where the sale occurred |
+| `campaign_id`  | INTEGER    | Marketing campaign ID if applicable |
+| `discount_percent` | REAL  | Discount applied to the sale |
+| `payment_type` | TEXT       | Payment method used (Credit, Debit, PayPal) |
+
+### 14.3 Load Data into the Data Warehouse
+1. Prepared data files are loaded into the SQLite database using `etl_to_dw.py`:
+   ```sh
+   python scripts/etl_to_dw.py
