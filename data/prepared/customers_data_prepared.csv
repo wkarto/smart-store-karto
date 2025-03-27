@@ -1,4 +1,4 @@
-CustomerID,Name,Region,JoinDate,LoyaltyPoints,CustomerSegment,StandardDateTime
+customer_id,name,region,join_date,loyalty_points,customer_segment,standard_datetime
 1001,William White,East,11/11/21,150,Bronze,2021-11-11
 1002,Wylie Coyote,East,2/14/23,200,Silver,2023-02-14
 1003,Dan Brown,West,10/19/23,100,Bronze,2023-10-19
