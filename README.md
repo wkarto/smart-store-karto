@@ -160,10 +160,10 @@ py scripts\data_prep.py
 - Drilldown enabled on time axis for multi-level analysis.
 
 ## 3. Power BI Data Model View
-![Model View](images\model_view.png)
+![Model View](images/model_view.png)
 
 ## 4. Power BI Query Result
-![Model View](images\query_result.png)
+![Model View](images/query_result.png)
 
 ## 5. Power BI Final Dashboard
-![Model View](images\final_dashboard.png)
+![Model View](images/final_dashboard.png)
