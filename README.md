@@ -142,3 +142,28 @@ py scripts\data_prep.py
 1. Prepared data files are loaded into the SQLite database using `etl_to_dw.py`:
    ```sh
    python scripts/etl_to_dw.py
+
+
+### 15 Power BI Sales Dashboard Report
+## 1. Transformed customer table using query
+   ```
+   SELECT c.name, SUM(s.sale_amount) AS total_spent
+     FROM sale s
+     JOIN customer c ON s.customer_id = c.customer_id
+     GROUP BY c.name
+     ORDER BY total_spent DESC;
+   ```
+## 2. Dashboard Design Choices
+- Bar chart to show top customers by total spent.
+- Line chart to track sales trends by year → quarter → month.
+- Slicer for product category to filter across visuals.
+- Drilldown enabled on time axis for multi-level analysis.
+
+## 3. Power BI Data Model View
+![Model View](images\model_view.png)
+
+## 4. Power BI Query Result
+![Model View](images\query_result.png)
+
+## 5. Power BI Final Dashboard
+![Model View](images\final_dashboard.png)
