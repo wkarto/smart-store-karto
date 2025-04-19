@@ -210,8 +210,8 @@ Power BI was chosen to explore advanced data visualization and OLAP capabilities
 ### 5. Results
 
 - **Donut Chart – Sales Distribution by Region**
-  - **Insight:** The North dominates with more than half of the total sales.  
-  - **Observation:** East has minimal impact (<5%), while South and West contribute 22% and 15%, respectively.
+  - **Insight:** The East dominates with more than half of the total sales.  
+  - **Observation:** North has minimal impact (<5%), while South and West contribute 22% and 15%, respectively.
 
 - **Treemap – Monthly Regional Trends**
   - **Insight:** South and West exhibit parallel growth patterns.  
@@ -229,8 +229,8 @@ Power BI was chosen to explore advanced data visualization and OLAP capabilities
 
 ### 6. Suggested Business Action
 
-- Increase investment in the North, which is the top-performing region.
-- Reassess strategy in the East boost awareness or promotions.
+- Increase investment in the East, which is the top-performing region.
+- Reassess strategy in the North boost awareness or promotions.
 - Prepare for seasonal fluctuations in the North by reinforcing mid-year campaigns.
 - Align marketing and inventory for the South and West, as their patterns are similar.
 - Highlight strong products like laptops in future bundles or campaigns.
