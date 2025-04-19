@@ -225,7 +225,7 @@ Power BI was chosen to explore advanced data visualization and OLAP capabilities
   - **Insight:** Electronics lead most regions, while Clothing dominates in the North.  
   - **Observation:** Sports products perform poorly in every region.
 
-![Dashboard](images/week6_dashboard)
+![Dashboard](images/week6_dashboard.png)
 
 ### 6. Suggested Business Action
 
