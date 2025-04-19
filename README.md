@@ -167,3 +167,75 @@ py scripts\data_prep.py
 
 ## 5. Power BI Final Dashboard
 ![Model View](images/final_dashboard.png)
+
+
+## Module 6 – OLAP Sales Analytics
+
+### 1. Project Objective
+The main aim of this analysis is to uncover sales patterns by geographic region and product category to better understand market performance.
+
+### 2. Data Overview
+The data comes from a data warehouse accessed via an ODBC connection, along with a previously generated OLAP cube file.
+
+- **From the Data Warehouse (Product Table):**  
+  `product_name`, `category`
+
+- **From the OLAP Cube:**  
+  `month`, `region`, `sale_amount_sum`
+
+### 3. Tools
+Power BI was chosen to explore advanced data visualization and OLAP capabilities, offering a hands-on learning experience with business intelligence tools.
+
+### 4. Workflow & Logic
+
+- **Key Dimensions:**
+  - **Category:** Represents high-level grouping of products  
+  - **Product Name:** Specific items being analyzed
+  - **Region:** Area where the sale occurred  
+  - **Time:** Implemented using a date hierarchy including Year, Quarter, and Month  
+
+- **Measures and Metrics:**
+  - **Total Sales:** Computed using the sum of `sale_amount_sum`
+
+- **OLAP Techniques in Action:**
+  - **Slicing:** Applied to isolate specific time periods  
+  - **Dicing:** Used to zoom into combinations like Product vs. Region  
+  - **Drilldowns:** Enabled through hierarchical time data to allow deeper insight
+
+- **Underlying Logic:**
+  - Data is modeled with dimensions tied to Region, Time, Product, and Category  
+  - Hierarchical date structures allow flexible exploration over time  
+  - Filters and groups help evaluate sales performance across locations and product types
+
+### 5. Results
+
+- **Donut Chart – Sales Distribution by Region**
+  - **Insight:** The North dominates with more than half of the total sales.  
+  - **Observation:** East has minimal impact (<5%), while South and West contribute 22% and 15%, respectively.
+
+- **Treemap – Monthly Regional Trends**
+  - **Insight:** South and West exhibit parallel growth patterns.  
+  - **Observation:** North sees a sharp drop in May and recovers in summer.
+
+- **Matrix – Product Performance by Region**
+  - **Insight:** Laptops lead sales in regions where available.  
+  - **Observation:** Cables are the least popular across all regions.
+
+- **Stacked Column Chart – Sales by Category and Region**
+  - **Insight:** Electronics lead most regions, while Clothing dominates in the North.  
+  - **Observation:** Sports products perform poorly in every region.
+
+![Dashboard](images/week6_dashboard)
+
+### 6. Suggested Business Action
+
+- Increase investment in the North, which is the top-performing region.
+- Reassess strategy in the East boost awareness or promotions.
+- Prepare for seasonal fluctuations in the North by reinforcing mid-year campaigns.
+- Align marketing and inventory for the South and West, as their patterns are similar.
+- Highlight strong products like laptops in future bundles or campaigns.
+- Evaluate the future of low-performing items such as football and cables.
+
+### 7. Challenges
+
+Some with Power BI, but overall everything is good
